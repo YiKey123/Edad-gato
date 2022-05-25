@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<title></title>
+<style type="text/css">
+ h1{
+  background-color: #eb5534;
+  color: #cfc9c8;
+  text-align: center;
+ }
+ .res{
+  padding: 15px;
+  margin: 5px;
+  text-align: center;
+  color: #1f1918;
+  font-size: 24px;
+ }
+</style>
+</head>
+
+<body>
+ <header><h1>AÑOS GATO A HUMANO</h1></header>
+ <section class="res">
+ <br><br><br>
+ <img src="IMG_20211102_201603.jpg" width="80%" height="80%">
+ <br>
+ <h2>Kiara</h2>
+ <input type="number" id="nro">
+ <button id="btn1">Metodo Siete</button>
+ <button id="btn2">Metodo Ln</button>
+ <br><br><br>
+    <h2>Conversor de edad:</h2>
+ <div id="resultado"></div>
+
+ <script>
+  //  registra un evento 
+  var e=document.getElementById('btn1');
+  e.addEventListener('click',siete);
+  var l=document.getElementById('btn2');
+  l.addEventListener('click',ln);  
+  function siete()
+  {
+    var n=parseInt(document.getElementById('nro').value);
+    var e=n*7
+   document.getElementById("resultado").innerHTML=  "El gato tiene "+e+" años humanos";
+  }
+  function ln(){
+    var n=parseInt(document.getElementById('nro').value);
+    var l=16*Math.log(n)+31;
+   document.getElementById("resultado").innerHTML= "El gato tiene "+l.toFixed(0)+" años humanos";
+}
+ </script>
+</section>
+</body>
+
+</html>
